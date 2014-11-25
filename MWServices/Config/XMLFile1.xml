@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MWServer>
+  <Components>
+    <Component id="MWDispatchComponent" factory="MWAbstractFactory">
+      <Sub ref="Searching"/>
+    </Component>
+    <Component id="MWCachingComponent" factory="MWAbstractFactory">
+      <Sub ref="Caching"/>
+    </Component>
+	<Component id="MWTaggingComponent" factory="MWAbstractFactory">
+      <Sub ref="Tagging"/>
+    </Component>
+	<Component id="MWMyWardrobeComponent" factory="MWAbstractFactory">
+      <Sub ref="MyWardrobe"/>
+    </Component>
+  </Components>
+  
+  <Searching>
+    <Interface id="MWSearchingEngineClient" factory="MWLocalClassFactory">
+      <Message id="Searching">
+        <Parameter id="return" type="String"/>
+        <Parameter id="input" type="String"/>
+      </Message>
+      <Message id="Details">
+		<Paramter id="return" type="String" />
+		<Paramter id="ids" type="int" />
+      </Message>
+	  <Message id="GetInitialMenuItem">
+		<Parameter id="return" type="String"/>
+		<Parameter id="MenuItem" type="String" />
+      </Message>
+	<Message id="UpdateLikeCount">
+		<Parameter id="return" type="String"/>
+		<Parameter id="UpdateInfo" type="String" />
+      </Message>
+      <Message id="AutoCompletion">
+		<Parameter id="return" type="String"/>
+		<Parameter id="input" type="String" />
+      </Message>
+      <Message id="Compare" >
+		<Parameter id="return" type="String" />
+		<Parameter id="input" type="String" />
+      </Message>
+	</Interface>
+  </Searching>
+
+  <Caching>
+    <Interface id="MWCachingClient" factory="MWLocalClassFactory">
+      <Message id="QuickRecommandation">
+        <Parameter id="return" type="String"/>
+        <Parameter id="input" type="String"/>
+      </Message>
+    </Interface>
+  </Caching>
+  
+  <Tagging>
+  <Interface id="MWTaggingClient" factory="MWLocalClassFactory">
+	<Message id="AddTag" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="DelTag" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="DelObjTag" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="EditTag" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="SaveTags" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="SaveTagsDel" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="EditObjTag" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="ListTags" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="ListAllTags" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="GetTagNumber" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="ImportedCount" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="LikedCount" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="DislikedCount" >
+		<Parameter id="return" type="string" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="ListItemByTag" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="ListOutfitByTag" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="SetCover" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="DefaultTagItem" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="GetTagNumber" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  </Interface>
+    </Tagging>
+  
+    <MyWardrobe>
+		<Interface id="MWMyWardrobeClient" factory="MWLocalClassFactory">
+	  <Message id="AddOutfit" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="DelOutfit" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="EditOutfit" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="AddItem" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="DelItem" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="DelItemsSave" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="MoveItemsTo" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="CreateUser" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="GetUserInfo" >
+		<Parameter id="return" type="String" />
+		<Parameter id="email" type="String" />
+      </Message>
+	  <Message id="UpdateUser" >
+		<Parameter id="return" type="String" />
+		<Parameter id="newinfo" type="String" />
+      </Message>
+	  <Message id="ListAllUserItems" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  <Message id="ListAllUserOutfits" >
+		<Parameter id="return" type="String" />
+		<Parameter id="inputs" type="String" />
+      </Message>
+	  </Interface>
+  </MyWardrobe>
+  </MWServer>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<megawardrobe>
+	<service name="dispatch" url="http://localhost:28433/Service.svc" >
+		<endpoint name="request" method="post" handler="XmlEndPointhandler" />
+	</service>
+
+	<service name="oauth" url="http://localhost:1296/Service.svc">
+		<endpoint name="Authorize" method="get" handler="defaultEndPointHandler" />
+		<endpoint name="AuthorizeResponse" method="get" handler="defaultEndPointHandler" />
+		<endpoint name="access_token" method="get" handler="JsonEndPointhandler" />
+		<endpoint name="CreateUser/" method="post" handler="XmlEndPointhandler" />
+		<endpoint name="UpdateUserPassword" method="get" handler="JsonEndPointhandler" />
+		<endpoint name="FacebookLogin/" method="post" handler="JsonEndPointhandler" />
+		<endpoint name="CheckUserEmil" method="get" handler="defaultEndPointHandler" />
+		<endpoint name="ValidateChpToken" method="get" handler="defaultEndPointHandler" />
+		<endpoint name="ValidateToken" method="get" handler="defaultEndPointHandler"/>
+		<endpoint name="GetUserId" method="get" handler="XmlEndPointhandler"/>
+	</service>
+</megawardrobe>

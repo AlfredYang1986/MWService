@@ -1,0 +1,4 @@
+
+{ 
+"Request":{"Token":"4u8Rsdcz0UjUHYzZjwCyBOmACZjs+EJ+",
+"RequestString": {"Parameters":[{"ParameterName":"acceptrequest","ParameterType":"string","ParameterValue":"{\"Items\":[{\"ItemId\":\"item1\",\"Xposition\":\"x\",\"Yposition\":\"y\",\"Top\":\"T\",\"Left\":\"L\",\"Width\":\"w\",\"Height\":\"H\"}],\"ID\":\"079c0466-e8d9-6654-99fe-0872fd32d8f6\",\"UserId\":\"susan\"}"}],"MessageName":"AcceptRequest"}}}

@@ -1,0 +1,2720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="MW_ABSTRACT_ITEM" EntityType="Model.Store.MW_ABSTRACT_ITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_ADDRESS" EntityType="Model.Store.MW_ADDRESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_APPAREL_SOURCE" EntityType="Model.Store.MW_APPAREL_SOURCE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_BRAND" EntityType="Model.Store.MW_BRAND" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_BRAND_CN" EntityType="Model.Store.MW_BRAND_CN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_CATEGORY" EntityType="Model.Store.MW_CATEGORY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_CATEGORY_CN" EntityType="Model.Store.MW_CATEGORY_CN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_CATEGORY_RELATIONSHIP" EntityType="Model.Store.MW_CATEGORY_RELATIONSHIP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_COLOUR" EntityType="Model.Store.MW_COLOUR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_COLOUR_CN" EntityType="Model.Store.MW_COLOUR_CN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_COLOUR_RELATIONSHIP" EntityType="Model.Store.MW_COLOUR_RELATIONSHIP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_ITEM_MATCHINGNESS" EntityType="Model.Store.MW_ITEM_MATCHINGNESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_ITEM_PICTURE" EntityType="Model.Store.MW_ITEM_PICTURE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_ITEM_SIMILARITY" EntityType="Model.Store.MW_ITEM_SIMILARITY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_ITEM_TAG" EntityType="Model.Store.MW_ITEM_TAG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_OUTFIT" EntityType="Model.Store.MW_OUTFIT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_OUTFIT_ITEM" EntityType="Model.Store.MW_OUTFIT_ITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_PICTURE" EntityType="Model.Store.MW_PICTURE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_REVIEW" EntityType="Model.Store.MW_REVIEW" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_SEARCHABLE_ITEM" EntityType="Model.Store.MW_SEARCHABLE_ITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_SIZE" EntityType="Model.Store.MW_SIZE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_TAG" EntityType="Model.Store.MW_TAG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_TAG_REL" EntityType="Model.Store.MW_TAG_REL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_UNIQ_ITEM" EntityType="Model.Store.MW_UNIQ_ITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_UPLOADED_ITEM" EntityType="Model.Store.MW_UPLOADED_ITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER" EntityType="Model.Store.MW_USER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER_ITEM_FAV" EntityType="Model.Store.MW_USER_ITEM_FAV" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER_RATE_OUTFIT" EntityType="Model.Store.MW_USER_RATE_OUTFIT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER_SSN" EntityType="Model.Store.MW_USER_SSN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER_TAG" EntityType="Model.Store.MW_USER_TAG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER_TAG_ITEM" EntityType="Model.Store.MW_USER_TAG_ITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER_TAG_OUTFIT" EntityType="Model.Store.MW_USER_TAG_OUTFIT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MW_USER_TAG_UPLOADED" EntityType="Model.Store.MW_USER_TAG_UPLOADED" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_MW_ABSTRACT_ITEM_MW_BRAND" Association="Model.Store.FK_MW_ABSTRACT_ITEM_MW_BRAND">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_ABSTRACT_ITEM" EntitySet="MW_ABSTRACT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ABSTRACT_ITEM_MW_BRAND1" Association="Model.Store.FK_MW_ABSTRACT_ITEM_MW_BRAND1">
+            <End Role="MW_BRAND" EntitySet="MW_BRAND" />
+            <End Role="MW_ABSTRACT_ITEM" EntitySet="MW_ABSTRACT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_BRAND_CN_MW_BRAND" Association="Model.Store.FK_MW_BRAND_CN_MW_BRAND">
+            <End Role="MW_BRAND" EntitySet="MW_BRAND" />
+            <End Role="MW_BRAND_CN" EntitySet="MW_BRAND_CN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_CATEGORY_CN_MW_CATEGORY" Association="Model.Store.FK_MW_CATEGORY_CN_MW_CATEGORY">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_CATEGORY_CN" EntitySet="MW_CATEGORY_CN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY" Association="Model.Store.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_CATEGORY_RELATIONSHIP" EntitySet="MW_CATEGORY_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1" Association="Model.Store.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_CATEGORY_RELATIONSHIP" EntitySet="MW_CATEGORY_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_COLOUR_CN_MW_COLOUR" Association="Model.Store.FK_MW_COLOUR_CN_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_COLOUR_CN" EntitySet="MW_COLOUR_CN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR" Association="Model.Store.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_COLOUR_RELATIONSHIP" EntitySet="MW_COLOUR_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1" Association="Model.Store.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_COLOUR_RELATIONSHIP" EntitySet="MW_COLOUR_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_COLOUR_MW_COLOUR" Association="Model.Store.FK_MW_ITEM_COLOUR_MW_COLOUR">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_MATCHINGNESS" EntitySet="MW_ITEM_MATCHINGNESS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1" Association="Model.Store.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_MATCHINGNESS" EntitySet="MW_ITEM_MATCHINGNESS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE" Association="Model.Store.FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE">
+            <End Role="MW_APPAREL_SOURCE" EntitySet="MW_APPAREL_SOURCE" />
+            <End Role="MW_ITEM_PICTURE" EntitySet="MW_ITEM_PICTURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_PICTURE_MW_Picture" Association="Model.Store.FK_MW_ITEM_PICTURE_MW_Picture">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_ITEM_PICTURE" EntitySet="MW_ITEM_PICTURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_PICTURE" EntitySet="MW_ITEM_PICTURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_SIMILARITY" EntitySet="MW_ITEM_SIMILARITY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1" Association="Model.Store.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_SIMILARITY" EntitySet="MW_ITEM_SIMILARITY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_SOURCE_MW_ADDRESS" Association="Model.Store.FK_MW_ITEM_SOURCE_MW_ADDRESS">
+            <End Role="MW_ADDRESS" EntitySet="MW_ADDRESS" />
+            <End Role="MW_APPAREL_SOURCE" EntitySet="MW_APPAREL_SOURCE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_TAG_MW_SEARCHABLE_ITEM1" Association="Model.Store.FK_MW_ITEM_TAG_MW_SEARCHABLE_ITEM1">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_TAG" EntitySet="MW_ITEM_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_TAG_MW_TAG" Association="Model.Store.FK_MW_ITEM_TAG_MW_TAG">
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+            <End Role="MW_ITEM_TAG" EntitySet="MW_ITEM_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_OUTFIT_ITEM_MW_OUTFIT1" Association="Model.Store.FK_MW_OUTFIT_ITEM_MW_OUTFIT1">
+            <End Role="MW_OUTFIT" EntitySet="MW_OUTFIT" />
+            <End Role="MW_OUTFIT_ITEM" EntitySet="MW_OUTFIT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_OUTFIT_ITEM" EntitySet="MW_OUTFIT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_REVIEW_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_REVIEW_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_REVIEW" EntitySet="MW_REVIEW" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_REVIEW_MW_USER" Association="Model.Store.FK_MW_REVIEW_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_REVIEW" EntitySet="MW_REVIEW" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM" Association="Model.Store.FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM">
+            <End Role="MW_ABSTRACT_ITEM" EntitySet="MW_ABSTRACT_ITEM" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_SEARCHABLE_ITEM_MW_COLOUR" Association="Model.Store.FK_MW_SEARCHABLE_ITEM_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE" Association="Model.Store.FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE">
+            <End Role="MW_APPAREL_SOURCE" EntitySet="MW_APPAREL_SOURCE" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_TAG_MW_Picture" Association="Model.Store.FK_MW_TAG_MW_Picture">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_TAG_REL_MW_TAG" Association="Model.Store.FK_MW_TAG_REL_MW_TAG">
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+            <End Role="MW_TAG_REL" EntitySet="MW_TAG_REL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_TAG_REL_MW_TAG1" Association="Model.Store.FK_MW_TAG_REL_MW_TAG1">
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+            <End Role="MW_TAG_REL" EntitySet="MW_TAG_REL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_UNIQ_ITEM" EntitySet="MW_UNIQ_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UNIQ_ITEM_MW_SIZE" Association="Model.Store.FK_MW_UNIQ_ITEM_MW_SIZE">
+            <End Role="MW_SIZE" EntitySet="MW_SIZE" />
+            <End Role="MW_UNIQ_ITEM" EntitySet="MW_UNIQ_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UPLOADED_ITEM_MW_CATEGORY" Association="Model.Store.FK_MW_UPLOADED_ITEM_MW_CATEGORY">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UPLOADED_ITEM_MW_COLOUR" Association="Model.Store.FK_MW_UPLOADED_ITEM_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM" Association="Model.Store.FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_ITEM_FAV_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_USER_ITEM_FAV_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_USER_ITEM_FAV" EntitySet="MW_USER_ITEM_FAV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_ITEM_FAV_MW_USER" Association="Model.Store.FK_MW_USER_ITEM_FAV_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_USER_ITEM_FAV" EntitySet="MW_USER_ITEM_FAV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_MW_PICTURE" Association="Model.Store.FK_MW_USER_MW_PICTURE">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_USER" EntitySet="MW_USER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_RATE_OUTFIT_MW_OUTFIT" Association="Model.Store.FK_MW_USER_RATE_OUTFIT_MW_OUTFIT">
+            <End Role="MW_OUTFIT" EntitySet="MW_OUTFIT" />
+            <End Role="MW_USER_RATE_OUTFIT" EntitySet="MW_USER_RATE_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_RATE_OUTFIT_MW_USER" Association="Model.Store.FK_MW_USER_RATE_OUTFIT_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_USER_RATE_OUTFIT" EntitySet="MW_USER_RATE_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_SSN_MW_USER" Association="Model.Store.FK_MW_USER_SSN_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_USER_SSN" EntitySet="MW_USER_SSN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_MW_TAG" Association="Model.Store.FK_MW_USER_TAG_MW_TAG">
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_MW_USER" Association="Model.Store.FK_MW_USER_TAG_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_OUTFITS_MW_OUTFIT" Association="Model.Store.FK_MW_USER_TAG_OUTFITS_MW_OUTFIT">
+            <End Role="MW_OUTFIT" EntitySet="MW_OUTFIT" />
+            <End Role="MW_USER_TAG_OUTFIT" EntitySet="MW_USER_TAG_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_OUTFITS_MW_USER_TAG" Association="Model.Store.FK_MW_USER_TAG_OUTFITS_MW_USER_TAG">
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+            <End Role="MW_USER_TAG_OUTFIT" EntitySet="MW_USER_TAG_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM" Association="Model.Store.FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_USER_TAG_ITEM" EntitySet="MW_USER_TAG_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG" Association="Model.Store.FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG">
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+            <End Role="MW_USER_TAG_ITEM" EntitySet="MW_USER_TAG_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM" Association="Model.Store.FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM">
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+            <End Role="MW_USER_TAG_UPLOADED" EntitySet="MW_USER_TAG_UPLOADED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_UPLOADED_MW_USER_TAG" Association="Model.Store.FK_MW_USER_TAG_UPLOADED_MW_USER_TAG">
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+            <End Role="MW_USER_TAG_UPLOADED" EntitySet="MW_USER_TAG_UPLOADED" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MW_ABSTRACT_ITEM">
+          <Key>
+            <PropertyRef Name="abstract_item_id" />
+          </Key>
+          <Property Name="category_id" Type="int" Nullable="false" />
+          <Property Name="abstract_item_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="material" Type="nvarchar" MaxLength="50" />
+          <Property Name="gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="brand_id" Type="int" />
+          <Property Name="upper_price" Type="real" />
+          <Property Name="lower_price" Type="real" />
+        </EntityType>
+        <EntityType Name="MW_ADDRESS">
+          <Key>
+            <PropertyRef Name="address_id" />
+          </Key>
+          <Property Name="address_id" Type="int" Nullable="false" />
+          <Property Name="country" Type="nchar" MaxLength="10" />
+          <Property Name="state" Type="nchar" MaxLength="10" />
+          <Property Name="street_address" Type="nchar" MaxLength="10" />
+          <Property Name="unit" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="MW_APPAREL_SOURCE">
+          <Key>
+            <PropertyRef Name="source_id" />
+          </Key>
+          <Property Name="source_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="source_name" Type="nvarchar" MaxLength="255" />
+          <Property Name="source_url" Type="nvarchar" MaxLength="255" />
+          <Property Name="address_id" Type="int" />
+          <Property Name="last_checked" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MW_BRAND">
+          <Key>
+            <PropertyRef Name="brand_id" />
+          </Key>
+          <Property Name="brand_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="brand_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MW_BRAND_CN">
+          <Key>
+            <PropertyRef Name="brand_id" />
+          </Key>
+          <Property Name="brand_id" Type="int" Nullable="false" />
+          <Property Name="brand_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MW_CATEGORY">
+          <Key>
+            <PropertyRef Name="category_id" />
+          </Key>
+          <Property Name="category_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="category_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MW_CATEGORY_CN">
+          <Key>
+            <PropertyRef Name="category_id" />
+          </Key>
+          <Property Name="category_id" Type="int" Nullable="false" />
+          <Property Name="category_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MW_CATEGORY_RELATIONSHIP">
+          <Key>
+            <PropertyRef Name="source_category" />
+            <PropertyRef Name="target_category" />
+          </Key>
+          <Property Name="source_category" Type="int" Nullable="false" />
+          <Property Name="target_category" Type="int" Nullable="false" />
+          <Property Name="relationship" Type="real" />
+        </EntityType>
+        <EntityType Name="MW_COLOUR">
+          <Key>
+            <PropertyRef Name="colour_id" />
+          </Key>
+          <Property Name="colour_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="colour_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MW_COLOUR_CN">
+          <Key>
+            <PropertyRef Name="colour_id" />
+          </Key>
+          <Property Name="colour_id" Type="int" Nullable="false" />
+          <Property Name="colour_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MW_COLOUR_RELATIONSHIP">
+          <Key>
+            <PropertyRef Name="source_colour" />
+            <PropertyRef Name="target_colour" />
+          </Key>
+          <Property Name="source_colour" Type="int" Nullable="false" />
+          <Property Name="target_colour" Type="int" Nullable="false" />
+          <Property Name="relationship" Type="real" />
+        </EntityType>
+        <EntityType Name="MW_ITEM_MATCHINGNESS">
+          <Key>
+            <PropertyRef Name="source_item_id" />
+            <PropertyRef Name="target_item_id" />
+          </Key>
+          <Property Name="source_item_id" Type="int" Nullable="false" />
+          <Property Name="target_item_id" Type="int" Nullable="false" />
+          <Property Name="matchingness" Type="real" />
+        </EntityType>
+        <EntityType Name="MW_ITEM_PICTURE">
+          <Key>
+            <PropertyRef Name="picture_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="picture_id" Type="int" Nullable="false" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" />
+          <Property Name="source_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_ITEM_SIMILARITY">
+          <Key>
+            <PropertyRef Name="source_item_id" />
+            <PropertyRef Name="target_item_id" />
+          </Key>
+          <Property Name="source_item_id" Type="int" Nullable="false" />
+          <Property Name="target_item_id" Type="int" Nullable="false" />
+          <Property Name="similarity" Type="real" />
+        </EntityType>
+        <EntityType Name="MW_ITEM_TAG">
+          <Key>
+            <PropertyRef Name="tag_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="tag_id" Type="int" Nullable="false" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_OUTFIT">
+          <Key>
+            <PropertyRef Name="outfit_id" />
+          </Key>
+          <Property Name="outfit_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="picture_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_OUTFIT_ITEM">
+          <Key>
+            <PropertyRef Name="outfit_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="outfit_id" Type="int" Nullable="false" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" />
+          <Property Name="pic_x" Type="int" Nullable="false" />
+          <Property Name="pic_y" Type="int" Nullable="false" />
+          <Property Name="angle" Type="real" />
+          <Property Name="crop_x" Type="real" />
+          <Property Name="crop_y" Type="real" />
+          <Property Name="crop_width" Type="real" />
+          <Property Name="crop_height" Type="real" />
+          <Property Name="sizing_factor" Type="real" />
+          <Property Name="z_index" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_PICTURE">
+          <Key>
+            <PropertyRef Name="picture_id" />
+          </Key>
+          <Property Name="picture_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="url" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="width" Type="int" Nullable="false" />
+          <Property Name="height" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_REVIEW">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="rating" Type="nchar" MaxLength="10" />
+          <Property Name="review" Type="nvarchar" MaxLength="1024" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_SEARCHABLE_ITEM">
+          <Key>
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="abstract_item_id" Type="int" Nullable="false" />
+          <Property Name="colour_id" Type="int" Nullable="false" />
+          <Property Name="price" Type="real" Nullable="false" />
+          <Property Name="discount" Type="real" />
+          <Property Name="from_url" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="source_id" Type="int" Nullable="false" />
+          <Property Name="default_pic" Type="int" />
+          <Property Name="product_code" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MW_SIZE">
+          <Key>
+            <PropertyRef Name="size_id" />
+          </Key>
+          <Property Name="size_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="size_val" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="size_type" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MW_TAG">
+          <Key>
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="tag_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tag_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="tag_type" Type="nvarchar" MaxLength="20" />
+          <Property Name="default_picture" Type="int" />
+        </EntityType>
+        <EntityType Name="MW_TAG_REL">
+          <Key>
+            <PropertyRef Name="source_tag_id" />
+            <PropertyRef Name="target_tag_id" />
+          </Key>
+          <Property Name="source_tag_id" Type="int" Nullable="false" />
+          <Property Name="target_tag_id" Type="int" Nullable="false" />
+          <Property Name="probability" Type="real" />
+        </EntityType>
+        <EntityType Name="MW_UNIQ_ITEM">
+          <Key>
+            <PropertyRef Name="uniq_item_id" />
+          </Key>
+          <Property Name="size_id" Type="int" Nullable="false" />
+          <Property Name="stock" Type="nvarchar" MaxLength="50" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" />
+          <Property Name="uniq_item_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="last_checked" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MW_UPLOADED_ITEM">
+          <Key>
+            <PropertyRef Name="upload_item_id" />
+          </Key>
+          <Property Name="upload_item_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nchar" MaxLength="10" />
+          <Property Name="colour_id" Type="int" Nullable="false" />
+          <Property Name="category_id" Type="int" Nullable="false" />
+          <Property Name="picture_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_USER">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="enable_SSN_login" Type="bit" Nullable="false" />
+          <Property Name="email" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="birthday" Type="date" />
+          <Property Name="gender" Type="char" MaxLength="1" />
+          <Property Name="name" Type="nchar" MaxLength="10" />
+          <Property Name="credit" Type="int" />
+          <Property Name="experience" Type="int" />
+          <Property Name="occupation" Type="nvarchar" MaxLength="50" />
+          <Property Name="nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="location" Type="nvarchar" MaxLength="50" />
+          <Property Name="profile_picture" Type="int" />
+        </EntityType>
+        <EntityType Name="MW_USER_ITEM_FAV">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_USER_RATE_OUTFIT">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="outfit_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="outfit_id" Type="int" Nullable="false" />
+          <Property Name="value" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_USER_SSN">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="SSN_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SSN_id" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="token" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="tag_id" Type="int" Nullable="false" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+          <Property Name="tag_picture" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG_ITEM">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="tag_id" Type="int" Nullable="false" />
+          <Property Name="searchable_item_id" Type="int" Nullable="false" />
+          <Property Name="tag_time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG_OUTFIT">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+            <PropertyRef Name="outfit_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="tag_id" Type="int" Nullable="false" />
+          <Property Name="outfit_id" Type="int" Nullable="false" />
+          <Property Name="tag_time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG_UPLOADED">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+            <PropertyRef Name="upload_item_id" />
+          </Key>
+          <Property Name="user_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="tag_id" Type="int" Nullable="false" />
+          <Property Name="upload_item_id" Type="int" Nullable="false" />
+          <Property Name="tag_time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_MW_ABSTRACT_ITEM_MW_BRAND">
+          <End Role="MW_CATEGORY" Type="Model.Store.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_ABSTRACT_ITEM" Type="Model.Store.MW_ABSTRACT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_ABSTRACT_ITEM">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ABSTRACT_ITEM_MW_BRAND1">
+          <End Role="MW_BRAND" Type="Model.Store.MW_BRAND" Multiplicity="0..1" />
+          <End Role="MW_ABSTRACT_ITEM" Type="Model.Store.MW_ABSTRACT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_BRAND">
+              <PropertyRef Name="brand_id" />
+            </Principal>
+            <Dependent Role="MW_ABSTRACT_ITEM">
+              <PropertyRef Name="brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_BRAND_CN_MW_BRAND">
+          <End Role="MW_BRAND" Type="Model.Store.MW_BRAND" Multiplicity="1" />
+          <End Role="MW_BRAND_CN" Type="Model.Store.MW_BRAND_CN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MW_BRAND">
+              <PropertyRef Name="brand_id" />
+            </Principal>
+            <Dependent Role="MW_BRAND_CN">
+              <PropertyRef Name="brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_CATEGORY_CN_MW_CATEGORY">
+          <End Role="MW_CATEGORY" Type="Model.Store.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_CATEGORY_CN" Type="Model.Store.MW_CATEGORY_CN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_CATEGORY_CN">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY">
+          <End Role="MW_CATEGORY" Type="Model.Store.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_CATEGORY_RELATIONSHIP" Type="Model.Store.MW_CATEGORY_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_CATEGORY_RELATIONSHIP">
+              <PropertyRef Name="source_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1">
+          <End Role="MW_CATEGORY" Type="Model.Store.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_CATEGORY_RELATIONSHIP" Type="Model.Store.MW_CATEGORY_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_CATEGORY_RELATIONSHIP">
+              <PropertyRef Name="target_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_COLOUR_CN_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.Store.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_COLOUR_CN" Type="Model.Store.MW_COLOUR_CN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_COLOUR_CN">
+              <PropertyRef Name="colour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.Store.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_COLOUR_RELATIONSHIP" Type="Model.Store.MW_COLOUR_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_COLOUR_RELATIONSHIP">
+              <PropertyRef Name="source_colour" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1">
+          <End Role="MW_COLOUR" Type="Model.Store.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_COLOUR_RELATIONSHIP" Type="Model.Store.MW_COLOUR_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_COLOUR_RELATIONSHIP">
+              <PropertyRef Name="target_colour" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_COLOUR_MW_COLOUR">
+          <End Role="MW_PICTURE" Type="Model.Store.MW_PICTURE" Multiplicity="0..1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="default_pic" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_MATCHINGNESS" Type="Model.Store.MW_ITEM_MATCHINGNESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_MATCHINGNESS">
+              <PropertyRef Name="source_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_MATCHINGNESS" Type="Model.Store.MW_ITEM_MATCHINGNESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_MATCHINGNESS">
+              <PropertyRef Name="target_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE">
+          <End Role="MW_APPAREL_SOURCE" Type="Model.Store.MW_APPAREL_SOURCE" Multiplicity="1" />
+          <End Role="MW_ITEM_PICTURE" Type="Model.Store.MW_ITEM_PICTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_APPAREL_SOURCE">
+              <PropertyRef Name="source_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_PICTURE">
+              <PropertyRef Name="source_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_PICTURE_MW_Picture">
+          <End Role="MW_PICTURE" Type="Model.Store.MW_PICTURE" Multiplicity="1" />
+          <End Role="MW_ITEM_PICTURE" Type="Model.Store.MW_ITEM_PICTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_PICTURE" Type="Model.Store.MW_ITEM_PICTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_PICTURE">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_SIMILARITY" Type="Model.Store.MW_ITEM_SIMILARITY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_SIMILARITY">
+              <PropertyRef Name="source_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_SIMILARITY" Type="Model.Store.MW_ITEM_SIMILARITY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_SIMILARITY">
+              <PropertyRef Name="target_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_SOURCE_MW_ADDRESS">
+          <End Role="MW_ADDRESS" Type="Model.Store.MW_ADDRESS" Multiplicity="0..1" />
+          <End Role="MW_APPAREL_SOURCE" Type="Model.Store.MW_APPAREL_SOURCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_ADDRESS">
+              <PropertyRef Name="address_id" />
+            </Principal>
+            <Dependent Role="MW_APPAREL_SOURCE">
+              <PropertyRef Name="address_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_TAG_MW_SEARCHABLE_ITEM1">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_TAG" Type="Model.Store.MW_ITEM_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_TAG">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_TAG_MW_TAG">
+          <End Role="MW_TAG" Type="Model.Store.MW_TAG" Multiplicity="1" />
+          <End Role="MW_ITEM_TAG" Type="Model.Store.MW_ITEM_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_TAG">
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_TAG">
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_OUTFIT_ITEM_MW_OUTFIT1">
+          <End Role="MW_OUTFIT" Type="Model.Store.MW_OUTFIT" Multiplicity="1" />
+          <End Role="MW_OUTFIT_ITEM" Type="Model.Store.MW_OUTFIT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Principal>
+            <Dependent Role="MW_OUTFIT_ITEM">
+              <PropertyRef Name="outfit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_OUTFIT_ITEM" Type="Model.Store.MW_OUTFIT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_OUTFIT_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_REVIEW_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_REVIEW" Type="Model.Store.MW_REVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_REVIEW">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_REVIEW_MW_USER">
+          <End Role="MW_USER" Type="Model.Store.MW_USER" Multiplicity="1" />
+          <End Role="MW_REVIEW" Type="Model.Store.MW_REVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_REVIEW">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM">
+          <End Role="MW_ABSTRACT_ITEM" Type="Model.Store.MW_ABSTRACT_ITEM" Multiplicity="1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_ABSTRACT_ITEM">
+              <PropertyRef Name="abstract_item_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="abstract_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_SEARCHABLE_ITEM_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.Store.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="colour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE">
+          <End Role="MW_APPAREL_SOURCE" Type="Model.Store.MW_APPAREL_SOURCE" Multiplicity="1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_APPAREL_SOURCE">
+              <PropertyRef Name="source_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="source_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_TAG_MW_Picture">
+          <End Role="MW_PICTURE" Type="Model.Store.MW_PICTURE" Multiplicity="0..1" />
+          <End Role="MW_TAG" Type="Model.Store.MW_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_TAG">
+              <PropertyRef Name="default_picture" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_TAG_REL_MW_TAG">
+          <End Role="MW_TAG" Type="Model.Store.MW_TAG" Multiplicity="1" />
+          <End Role="MW_TAG_REL" Type="Model.Store.MW_TAG_REL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_TAG">
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_TAG_REL">
+              <PropertyRef Name="source_tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_TAG_REL_MW_TAG1">
+          <End Role="MW_TAG" Type="Model.Store.MW_TAG" Multiplicity="1" />
+          <End Role="MW_TAG_REL" Type="Model.Store.MW_TAG_REL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_TAG">
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_TAG_REL">
+              <PropertyRef Name="target_tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_UNIQ_ITEM" Type="Model.Store.MW_UNIQ_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_UNIQ_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UNIQ_ITEM_MW_SIZE">
+          <End Role="MW_SIZE" Type="Model.Store.MW_SIZE" Multiplicity="1" />
+          <End Role="MW_UNIQ_ITEM" Type="Model.Store.MW_UNIQ_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SIZE">
+              <PropertyRef Name="size_id" />
+            </Principal>
+            <Dependent Role="MW_UNIQ_ITEM">
+              <PropertyRef Name="size_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UPLOADED_ITEM_MW_CATEGORY">
+          <End Role="MW_CATEGORY" Type="Model.Store.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_UPLOADED_ITEM" Type="Model.Store.MW_UPLOADED_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UPLOADED_ITEM_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.Store.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_UPLOADED_ITEM" Type="Model.Store.MW_UPLOADED_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="colour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM">
+          <End Role="MW_PICTURE" Type="Model.Store.MW_PICTURE" Multiplicity="1" />
+          <End Role="MW_UPLOADED_ITEM" Type="Model.Store.MW_UPLOADED_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="picture_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_ITEM_FAV_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_USER_ITEM_FAV" Type="Model.Store.MW_USER_ITEM_FAV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_USER_ITEM_FAV">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_ITEM_FAV_MW_USER">
+          <End Role="MW_USER" Type="Model.Store.MW_USER" Multiplicity="1" />
+          <End Role="MW_USER_ITEM_FAV" Type="Model.Store.MW_USER_ITEM_FAV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_USER_ITEM_FAV">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_MW_PICTURE">
+          <End Role="MW_PICTURE" Type="Model.Store.MW_PICTURE" Multiplicity="0..1" />
+          <End Role="MW_USER" Type="Model.Store.MW_USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_USER">
+              <PropertyRef Name="profile_picture" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_RATE_OUTFIT_MW_OUTFIT">
+          <End Role="MW_OUTFIT" Type="Model.Store.MW_OUTFIT" Multiplicity="1" />
+          <End Role="MW_USER_RATE_OUTFIT" Type="Model.Store.MW_USER_RATE_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Principal>
+            <Dependent Role="MW_USER_RATE_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_RATE_OUTFIT_MW_USER">
+          <End Role="MW_USER" Type="Model.Store.MW_USER" Multiplicity="1" />
+          <End Role="MW_USER_RATE_OUTFIT" Type="Model.Store.MW_USER_RATE_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_USER_RATE_OUTFIT">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_SSN_MW_USER">
+          <End Role="MW_USER" Type="Model.Store.MW_USER" Multiplicity="1" />
+          <End Role="MW_USER_SSN" Type="Model.Store.MW_USER_SSN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_USER_SSN">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_MW_TAG">
+          <End Role="MW_TAG" Type="Model.Store.MW_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG" Type="Model.Store.MW_USER_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_TAG">
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG">
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_MW_USER">
+          <End Role="MW_USER" Type="Model.Store.MW_USER" Multiplicity="1" />
+          <End Role="MW_USER_TAG" Type="Model.Store.MW_USER_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_OUTFITS_MW_OUTFIT">
+          <End Role="MW_OUTFIT" Type="Model.Store.MW_OUTFIT" Multiplicity="1" />
+          <End Role="MW_USER_TAG_OUTFIT" Type="Model.Store.MW_USER_TAG_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_OUTFITS_MW_USER_TAG">
+          <End Role="MW_USER_TAG" Type="Model.Store.MW_USER_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG_OUTFIT" Type="Model.Store.MW_USER_TAG_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_OUTFIT">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.Store.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_USER_TAG_ITEM" Type="Model.Store.MW_USER_TAG_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG">
+          <End Role="MW_USER_TAG" Type="Model.Store.MW_USER_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG_ITEM" Type="Model.Store.MW_USER_TAG_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_ITEM">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM">
+          <End Role="MW_UPLOADED_ITEM" Type="Model.Store.MW_UPLOADED_ITEM" Multiplicity="1" />
+          <End Role="MW_USER_TAG_UPLOADED" Type="Model.Store.MW_USER_TAG_UPLOADED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="upload_item_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_UPLOADED">
+              <PropertyRef Name="upload_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_UPLOADED_MW_USER_TAG">
+          <End Role="MW_USER_TAG" Type="Model.Store.MW_USER_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG_UPLOADED" Type="Model.Store.MW_USER_TAG_UPLOADED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_UPLOADED">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MWDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="MW_ABSTRACT_ITEM" EntityType="Model.MW_ABSTRACT_ITEM" />
+          <EntitySet Name="MW_ADDRESS" EntityType="Model.MW_ADDRESS" />
+          <EntitySet Name="MW_APPAREL_SOURCE" EntityType="Model.MW_APPAREL_SOURCE" />
+          <EntitySet Name="MW_BRAND" EntityType="Model.MW_BRAND" />
+          <EntitySet Name="MW_BRAND_CN" EntityType="Model.MW_BRAND_CN" />
+          <EntitySet Name="MW_CATEGORY" EntityType="Model.MW_CATEGORY" />
+          <EntitySet Name="MW_CATEGORY_CN" EntityType="Model.MW_CATEGORY_CN" />
+          <EntitySet Name="MW_CATEGORY_RELATIONSHIP" EntityType="Model.MW_CATEGORY_RELATIONSHIP" />
+          <EntitySet Name="MW_COLOUR" EntityType="Model.MW_COLOUR" />
+          <EntitySet Name="MW_COLOUR_CN" EntityType="Model.MW_COLOUR_CN" />
+          <EntitySet Name="MW_COLOUR_RELATIONSHIP" EntityType="Model.MW_COLOUR_RELATIONSHIP" />
+          <EntitySet Name="MW_ITEM_MATCHINGNESS" EntityType="Model.MW_ITEM_MATCHINGNESS" />
+          <EntitySet Name="MW_ITEM_PICTURE" EntityType="Model.MW_ITEM_PICTURE" />
+          <EntitySet Name="MW_ITEM_SIMILARITY" EntityType="Model.MW_ITEM_SIMILARITY" />
+          <EntitySet Name="MW_OUTFIT" EntityType="Model.MW_OUTFIT" />
+          <EntitySet Name="MW_OUTFIT_ITEM" EntityType="Model.MW_OUTFIT_ITEM" />
+          <EntitySet Name="MW_PICTURE" EntityType="Model.MW_PICTURE" />
+          <EntitySet Name="MW_REVIEW" EntityType="Model.MW_REVIEW" />
+          <EntitySet Name="MW_SEARCHABLE_ITEM" EntityType="Model.MW_SEARCHABLE_ITEM" />
+          <EntitySet Name="MW_SIZE" EntityType="Model.MW_SIZE" />
+          <EntitySet Name="MW_TAG" EntityType="Model.MW_TAG" />
+          <EntitySet Name="MW_TAG_REL" EntityType="Model.MW_TAG_REL" />
+          <EntitySet Name="MW_UNIQ_ITEM" EntityType="Model.MW_UNIQ_ITEM" />
+          <EntitySet Name="MW_UPLOADED_ITEM" EntityType="Model.MW_UPLOADED_ITEM" />
+          <EntitySet Name="MW_USER" EntityType="Model.MW_USER" />
+          <EntitySet Name="MW_USER_RATE_OUTFIT" EntityType="Model.MW_USER_RATE_OUTFIT" />
+          <EntitySet Name="MW_USER_SSN" EntityType="Model.MW_USER_SSN" />
+          <EntitySet Name="MW_USER_TAG" EntityType="Model.MW_USER_TAG" />
+          <EntitySet Name="MW_USER_TAG_ITEM" EntityType="Model.MW_USER_TAG_ITEM" />
+          <EntitySet Name="MW_USER_TAG_OUTFIT" EntityType="Model.MW_USER_TAG_OUTFIT" />
+          <EntitySet Name="MW_USER_TAG_UPLOADED" EntityType="Model.MW_USER_TAG_UPLOADED" />
+          <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagrams" />
+          <AssociationSet Name="FK_MW_ABSTRACT_ITEM_MW_BRAND" Association="Model.FK_MW_ABSTRACT_ITEM_MW_BRAND">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_ABSTRACT_ITEM" EntitySet="MW_ABSTRACT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ABSTRACT_ITEM_MW_BRAND1" Association="Model.FK_MW_ABSTRACT_ITEM_MW_BRAND1">
+            <End Role="MW_BRAND" EntitySet="MW_BRAND" />
+            <End Role="MW_ABSTRACT_ITEM" EntitySet="MW_ABSTRACT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM" Association="Model.FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM">
+            <End Role="MW_ABSTRACT_ITEM" EntitySet="MW_ABSTRACT_ITEM" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_SOURCE_MW_ADDRESS" Association="Model.FK_MW_ITEM_SOURCE_MW_ADDRESS">
+            <End Role="MW_ADDRESS" EntitySet="MW_ADDRESS" />
+            <End Role="MW_APPAREL_SOURCE" EntitySet="MW_APPAREL_SOURCE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE" Association="Model.FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE">
+            <End Role="MW_APPAREL_SOURCE" EntitySet="MW_APPAREL_SOURCE" />
+            <End Role="MW_ITEM_PICTURE" EntitySet="MW_ITEM_PICTURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE" Association="Model.FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE">
+            <End Role="MW_APPAREL_SOURCE" EntitySet="MW_APPAREL_SOURCE" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_BRAND_CN_MW_BRAND" Association="Model.FK_MW_BRAND_CN_MW_BRAND">
+            <End Role="MW_BRAND" EntitySet="MW_BRAND" />
+            <End Role="MW_BRAND_CN" EntitySet="MW_BRAND_CN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_CATEGORY_CN_MW_CATEGORY" Association="Model.FK_MW_CATEGORY_CN_MW_CATEGORY">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_CATEGORY_CN" EntitySet="MW_CATEGORY_CN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY" Association="Model.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_CATEGORY_RELATIONSHIP" EntitySet="MW_CATEGORY_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1" Association="Model.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_CATEGORY_RELATIONSHIP" EntitySet="MW_CATEGORY_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UPLOADED_ITEM_MW_CATEGORY" Association="Model.FK_MW_UPLOADED_ITEM_MW_CATEGORY">
+            <End Role="MW_CATEGORY" EntitySet="MW_CATEGORY" />
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_COLOUR_CN_MW_COLOUR" Association="Model.FK_MW_COLOUR_CN_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_COLOUR_CN" EntitySet="MW_COLOUR_CN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR" Association="Model.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_COLOUR_RELATIONSHIP" EntitySet="MW_COLOUR_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1" Association="Model.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_COLOUR_RELATIONSHIP" EntitySet="MW_COLOUR_RELATIONSHIP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_SEARCHABLE_ITEM_MW_COLOUR" Association="Model.FK_MW_SEARCHABLE_ITEM_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UPLOADED_ITEM_MW_COLOUR" Association="Model.FK_MW_UPLOADED_ITEM_MW_COLOUR">
+            <End Role="MW_COLOUR" EntitySet="MW_COLOUR" />
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM" Association="Model.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_MATCHINGNESS" EntitySet="MW_ITEM_MATCHINGNESS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1" Association="Model.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_MATCHINGNESS" EntitySet="MW_ITEM_MATCHINGNESS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_PICTURE_MW_Picture" Association="Model.FK_MW_ITEM_PICTURE_MW_Picture">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_ITEM_PICTURE" EntitySet="MW_ITEM_PICTURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM" Association="Model.FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_PICTURE" EntitySet="MW_ITEM_PICTURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM" Association="Model.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_SIMILARITY" EntitySet="MW_ITEM_SIMILARITY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1" Association="Model.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_ITEM_SIMILARITY" EntitySet="MW_ITEM_SIMILARITY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_OUTFIT_ITEM_MW_OUTFIT1" Association="Model.FK_MW_OUTFIT_ITEM_MW_OUTFIT1">
+            <End Role="MW_OUTFIT" EntitySet="MW_OUTFIT" />
+            <End Role="MW_OUTFIT_ITEM" EntitySet="MW_OUTFIT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_RATE_OUTFIT_MW_OUTFIT" Association="Model.FK_MW_USER_RATE_OUTFIT_MW_OUTFIT">
+            <End Role="MW_OUTFIT" EntitySet="MW_OUTFIT" />
+            <End Role="MW_USER_RATE_OUTFIT" EntitySet="MW_USER_RATE_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_OUTFITS_MW_OUTFIT" Association="Model.FK_MW_USER_TAG_OUTFITS_MW_OUTFIT">
+            <End Role="MW_OUTFIT" EntitySet="MW_OUTFIT" />
+            <End Role="MW_USER_TAG_OUTFIT" EntitySet="MW_USER_TAG_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM" Association="Model.FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_OUTFIT_ITEM" EntitySet="MW_OUTFIT_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_ITEM_COLOUR_MW_COLOUR" Association="Model.FK_MW_ITEM_COLOUR_MW_COLOUR">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_TAG_MW_Picture" Association="Model.FK_MW_TAG_MW_Picture">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM" Association="Model.FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_MW_PICTURE" Association="Model.FK_MW_USER_MW_PICTURE">
+            <End Role="MW_PICTURE" EntitySet="MW_PICTURE" />
+            <End Role="MW_USER" EntitySet="MW_USER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_REVIEW_MW_SEARCHABLE_ITEM" Association="Model.FK_MW_REVIEW_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_REVIEW" EntitySet="MW_REVIEW" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_REVIEW_MW_USER" Association="Model.FK_MW_REVIEW_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_REVIEW" EntitySet="MW_REVIEW" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM" Association="Model.FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_UNIQ_ITEM" EntitySet="MW_UNIQ_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM" Association="Model.FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_USER_TAG_ITEM" EntitySet="MW_USER_TAG_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_UNIQ_ITEM_MW_SIZE" Association="Model.FK_MW_UNIQ_ITEM_MW_SIZE">
+            <End Role="MW_SIZE" EntitySet="MW_SIZE" />
+            <End Role="MW_UNIQ_ITEM" EntitySet="MW_UNIQ_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_TAG_REL_MW_TAG" Association="Model.FK_MW_TAG_REL_MW_TAG">
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+            <End Role="MW_TAG_REL" EntitySet="MW_TAG_REL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_TAG_REL_MW_TAG1" Association="Model.FK_MW_TAG_REL_MW_TAG1">
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+            <End Role="MW_TAG_REL" EntitySet="MW_TAG_REL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_MW_TAG" Association="Model.FK_MW_USER_TAG_MW_TAG">
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM" Association="Model.FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM">
+            <End Role="MW_UPLOADED_ITEM" EntitySet="MW_UPLOADED_ITEM" />
+            <End Role="MW_USER_TAG_UPLOADED" EntitySet="MW_USER_TAG_UPLOADED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_RATE_OUTFIT_MW_USER" Association="Model.FK_MW_USER_RATE_OUTFIT_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_USER_RATE_OUTFIT" EntitySet="MW_USER_RATE_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_SSN_MW_USER" Association="Model.FK_MW_USER_SSN_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_USER_SSN" EntitySet="MW_USER_SSN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_MW_USER" Association="Model.FK_MW_USER_TAG_MW_USER">
+            <End Role="MW_USER" EntitySet="MW_USER" />
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_OUTFITS_MW_USER_TAG" Association="Model.FK_MW_USER_TAG_OUTFITS_MW_USER_TAG">
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+            <End Role="MW_USER_TAG_OUTFIT" EntitySet="MW_USER_TAG_OUTFIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG" Association="Model.FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG">
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+            <End Role="MW_USER_TAG_ITEM" EntitySet="MW_USER_TAG_ITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MW_USER_TAG_UPLOADED_MW_USER_TAG" Association="Model.FK_MW_USER_TAG_UPLOADED_MW_USER_TAG">
+            <End Role="MW_USER_TAG" EntitySet="MW_USER_TAG" />
+            <End Role="MW_USER_TAG_UPLOADED" EntitySet="MW_USER_TAG_UPLOADED" />
+          </AssociationSet>
+          <AssociationSet Name="MW_ITEM_TAG" Association="Model.MW_ITEM_TAG">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_TAG" EntitySet="MW_TAG" />
+          </AssociationSet>
+          <AssociationSet Name="MW_USER_ITEM_FAV" Association="Model.MW_USER_ITEM_FAV">
+            <End Role="MW_SEARCHABLE_ITEM" EntitySet="MW_SEARCHABLE_ITEM" />
+            <End Role="MW_USER" EntitySet="MW_USER" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MW_ABSTRACT_ITEM">
+          <Key>
+            <PropertyRef Name="abstract_item_id" />
+          </Key>
+          <Property Name="category_id" Type="Int32" Nullable="false" />
+          <Property Name="abstract_item_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="material" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="gender" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="brand_id" Type="Int32" />
+          <Property Name="upper_price" Type="Single" />
+          <Property Name="lower_price" Type="Single" />
+          <NavigationProperty Name="MW_CATEGORY" Relationship="Model.FK_MW_ABSTRACT_ITEM_MW_BRAND" FromRole="MW_ABSTRACT_ITEM" ToRole="MW_CATEGORY" />
+          <NavigationProperty Name="MW_BRAND" Relationship="Model.FK_MW_ABSTRACT_ITEM_MW_BRAND1" FromRole="MW_ABSTRACT_ITEM" ToRole="MW_BRAND" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM" FromRole="MW_ABSTRACT_ITEM" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_ADDRESS">
+          <Key>
+            <PropertyRef Name="address_id" />
+          </Key>
+          <Property Name="address_id" Type="Int32" Nullable="false" />
+          <Property Name="country" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="state" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="street_address" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="unit" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="MW_APPAREL_SOURCE" Relationship="Model.FK_MW_ITEM_SOURCE_MW_ADDRESS" FromRole="MW_ADDRESS" ToRole="MW_APPAREL_SOURCE" />
+        </EntityType>
+        <EntityType Name="MW_APPAREL_SOURCE">
+          <Key>
+            <PropertyRef Name="source_id" />
+          </Key>
+          <Property Name="source_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="source_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="source_url" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="address_id" Type="Int32" />
+          <Property Name="last_checked" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MW_ADDRESS" Relationship="Model.FK_MW_ITEM_SOURCE_MW_ADDRESS" FromRole="MW_APPAREL_SOURCE" ToRole="MW_ADDRESS" />
+          <NavigationProperty Name="MW_ITEM_PICTURE" Relationship="Model.FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE" FromRole="MW_APPAREL_SOURCE" ToRole="MW_ITEM_PICTURE" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE" FromRole="MW_APPAREL_SOURCE" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_BRAND">
+          <Key>
+            <PropertyRef Name="brand_id" />
+          </Key>
+          <Property Name="brand_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="brand_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_ABSTRACT_ITEM" Relationship="Model.FK_MW_ABSTRACT_ITEM_MW_BRAND1" FromRole="MW_BRAND" ToRole="MW_ABSTRACT_ITEM" />
+          <NavigationProperty Name="MW_BRAND_CN" Relationship="Model.FK_MW_BRAND_CN_MW_BRAND" FromRole="MW_BRAND" ToRole="MW_BRAND_CN" />
+        </EntityType>
+        <EntityType Name="MW_BRAND_CN">
+          <Key>
+            <PropertyRef Name="brand_id" />
+          </Key>
+          <Property Name="brand_id" Type="Int32" Nullable="false" />
+          <Property Name="brand_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_BRAND" Relationship="Model.FK_MW_BRAND_CN_MW_BRAND" FromRole="MW_BRAND_CN" ToRole="MW_BRAND" />
+        </EntityType>
+        <EntityType Name="MW_CATEGORY">
+          <Key>
+            <PropertyRef Name="category_id" />
+          </Key>
+          <Property Name="category_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="category_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_ABSTRACT_ITEM" Relationship="Model.FK_MW_ABSTRACT_ITEM_MW_BRAND" FromRole="MW_CATEGORY" ToRole="MW_ABSTRACT_ITEM" />
+          <NavigationProperty Name="MW_CATEGORY_CN" Relationship="Model.FK_MW_CATEGORY_CN_MW_CATEGORY" FromRole="MW_CATEGORY" ToRole="MW_CATEGORY_CN" />
+          <NavigationProperty Name="MW_CATEGORY_RELATIONSHIP" Relationship="Model.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY" FromRole="MW_CATEGORY" ToRole="MW_CATEGORY_RELATIONSHIP" />
+          <NavigationProperty Name="MW_CATEGORY_RELATIONSHIP1" Relationship="Model.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1" FromRole="MW_CATEGORY" ToRole="MW_CATEGORY_RELATIONSHIP" />
+          <NavigationProperty Name="MW_UPLOADED_ITEM" Relationship="Model.FK_MW_UPLOADED_ITEM_MW_CATEGORY" FromRole="MW_CATEGORY" ToRole="MW_UPLOADED_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_CATEGORY_CN">
+          <Key>
+            <PropertyRef Name="category_id" />
+          </Key>
+          <Property Name="category_id" Type="Int32" Nullable="false" />
+          <Property Name="category_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_CATEGORY" Relationship="Model.FK_MW_CATEGORY_CN_MW_CATEGORY" FromRole="MW_CATEGORY_CN" ToRole="MW_CATEGORY" />
+        </EntityType>
+        <EntityType Name="MW_CATEGORY_RELATIONSHIP">
+          <Key>
+            <PropertyRef Name="source_category" />
+            <PropertyRef Name="target_category" />
+          </Key>
+          <Property Name="source_category" Type="Int32" Nullable="false" />
+          <Property Name="target_category" Type="Int32" Nullable="false" />
+          <Property Name="relationship" Type="Single" />
+          <NavigationProperty Name="MW_CATEGORY" Relationship="Model.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY" FromRole="MW_CATEGORY_RELATIONSHIP" ToRole="MW_CATEGORY" />
+          <NavigationProperty Name="MW_CATEGORY1" Relationship="Model.FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1" FromRole="MW_CATEGORY_RELATIONSHIP" ToRole="MW_CATEGORY" />
+        </EntityType>
+        <EntityType Name="MW_COLOUR">
+          <Key>
+            <PropertyRef Name="colour_id" />
+          </Key>
+          <Property Name="colour_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="colour_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_COLOUR_CN" Relationship="Model.FK_MW_COLOUR_CN_MW_COLOUR" FromRole="MW_COLOUR" ToRole="MW_COLOUR_CN" />
+          <NavigationProperty Name="MW_COLOUR_RELATIONSHIP" Relationship="Model.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR" FromRole="MW_COLOUR" ToRole="MW_COLOUR_RELATIONSHIP" />
+          <NavigationProperty Name="MW_COLOUR_RELATIONSHIP1" Relationship="Model.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1" FromRole="MW_COLOUR" ToRole="MW_COLOUR_RELATIONSHIP" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_SEARCHABLE_ITEM_MW_COLOUR" FromRole="MW_COLOUR" ToRole="MW_SEARCHABLE_ITEM" />
+          <NavigationProperty Name="MW_UPLOADED_ITEM" Relationship="Model.FK_MW_UPLOADED_ITEM_MW_COLOUR" FromRole="MW_COLOUR" ToRole="MW_UPLOADED_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_COLOUR_CN">
+          <Key>
+            <PropertyRef Name="colour_id" />
+          </Key>
+          <Property Name="colour_id" Type="Int32" Nullable="false" />
+          <Property Name="colour_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_COLOUR" Relationship="Model.FK_MW_COLOUR_CN_MW_COLOUR" FromRole="MW_COLOUR_CN" ToRole="MW_COLOUR" />
+        </EntityType>
+        <EntityType Name="MW_COLOUR_RELATIONSHIP">
+          <Key>
+            <PropertyRef Name="source_colour" />
+            <PropertyRef Name="target_colour" />
+          </Key>
+          <Property Name="source_colour" Type="Int32" Nullable="false" />
+          <Property Name="target_colour" Type="Int32" Nullable="false" />
+          <Property Name="relationship" Type="Single" />
+          <NavigationProperty Name="MW_COLOUR" Relationship="Model.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR" FromRole="MW_COLOUR_RELATIONSHIP" ToRole="MW_COLOUR" />
+          <NavigationProperty Name="MW_COLOUR1" Relationship="Model.FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1" FromRole="MW_COLOUR_RELATIONSHIP" ToRole="MW_COLOUR" />
+        </EntityType>
+        <EntityType Name="MW_ITEM_MATCHINGNESS">
+          <Key>
+            <PropertyRef Name="source_item_id" />
+            <PropertyRef Name="target_item_id" />
+          </Key>
+          <Property Name="source_item_id" Type="Int32" Nullable="false" />
+          <Property Name="target_item_id" Type="Int32" Nullable="false" />
+          <Property Name="matchingness" Type="Single" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM" FromRole="MW_ITEM_MATCHINGNESS" ToRole="MW_SEARCHABLE_ITEM" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM1" Relationship="Model.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1" FromRole="MW_ITEM_MATCHINGNESS" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_ITEM_PICTURE">
+          <Key>
+            <PropertyRef Name="picture_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="picture_id" Type="Int32" Nullable="false" />
+          <Property Name="searchable_item_id" Type="Int32" Nullable="false" />
+          <Property Name="source_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_APPAREL_SOURCE" Relationship="Model.FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE" FromRole="MW_ITEM_PICTURE" ToRole="MW_APPAREL_SOURCE" />
+          <NavigationProperty Name="MW_PICTURE" Relationship="Model.FK_MW_ITEM_PICTURE_MW_Picture" FromRole="MW_ITEM_PICTURE" ToRole="MW_PICTURE" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM" FromRole="MW_ITEM_PICTURE" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_ITEM_SIMILARITY">
+          <Key>
+            <PropertyRef Name="source_item_id" />
+            <PropertyRef Name="target_item_id" />
+          </Key>
+          <Property Name="source_item_id" Type="Int32" Nullable="false" />
+          <Property Name="target_item_id" Type="Int32" Nullable="false" />
+          <Property Name="similarity" Type="Single" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM" FromRole="MW_ITEM_SIMILARITY" ToRole="MW_SEARCHABLE_ITEM" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM1" Relationship="Model.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1" FromRole="MW_ITEM_SIMILARITY" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_OUTFIT">
+          <Key>
+            <PropertyRef Name="outfit_id" />
+          </Key>
+          <Property Name="outfit_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="picture_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_OUTFIT_ITEM" Relationship="Model.FK_MW_OUTFIT_ITEM_MW_OUTFIT1" FromRole="MW_OUTFIT" ToRole="MW_OUTFIT_ITEM" />
+          <NavigationProperty Name="MW_USER_RATE_OUTFIT" Relationship="Model.FK_MW_USER_RATE_OUTFIT_MW_OUTFIT" FromRole="MW_OUTFIT" ToRole="MW_USER_RATE_OUTFIT" />
+          <NavigationProperty Name="MW_USER_TAG_OUTFIT" Relationship="Model.FK_MW_USER_TAG_OUTFITS_MW_OUTFIT" FromRole="MW_OUTFIT" ToRole="MW_USER_TAG_OUTFIT" />
+        </EntityType>
+        <EntityType Name="MW_OUTFIT_ITEM">
+          <Key>
+            <PropertyRef Name="outfit_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="outfit_id" Type="Int32" Nullable="false" />
+          <Property Name="searchable_item_id" Type="Int32" Nullable="false" />
+          <Property Name="pic_x" Type="Int32" Nullable="false" />
+          <Property Name="pic_y" Type="Int32" Nullable="false" />
+          <Property Name="angle" Type="Single" />
+          <Property Name="crop_x" Type="Single" />
+          <Property Name="crop_y" Type="Single" />
+          <Property Name="crop_width" Type="Single" />
+          <Property Name="crop_height" Type="Single" />
+          <Property Name="sizing_factor" Type="Single" />
+          <Property Name="z_index" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_OUTFIT" Relationship="Model.FK_MW_OUTFIT_ITEM_MW_OUTFIT1" FromRole="MW_OUTFIT_ITEM" ToRole="MW_OUTFIT" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM" FromRole="MW_OUTFIT_ITEM" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_PICTURE">
+          <Key>
+            <PropertyRef Name="picture_id" />
+          </Key>
+          <Property Name="picture_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="url" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="width" Type="Int32" Nullable="false" />
+          <Property Name="height" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_ITEM_PICTURE" Relationship="Model.FK_MW_ITEM_PICTURE_MW_Picture" FromRole="MW_PICTURE" ToRole="MW_ITEM_PICTURE" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_ITEM_COLOUR_MW_COLOUR" FromRole="MW_PICTURE" ToRole="MW_SEARCHABLE_ITEM" />
+          <NavigationProperty Name="MW_TAG" Relationship="Model.FK_MW_TAG_MW_Picture" FromRole="MW_PICTURE" ToRole="MW_TAG" />
+          <NavigationProperty Name="MW_UPLOADED_ITEM" Relationship="Model.FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM" FromRole="MW_PICTURE" ToRole="MW_UPLOADED_ITEM" />
+          <NavigationProperty Name="MW_USER" Relationship="Model.FK_MW_USER_MW_PICTURE" FromRole="MW_PICTURE" ToRole="MW_USER" />
+        </EntityType>
+        <EntityType Name="MW_REVIEW">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="rating" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="review" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="searchable_item_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_REVIEW_MW_SEARCHABLE_ITEM" FromRole="MW_REVIEW" ToRole="MW_SEARCHABLE_ITEM" />
+          <NavigationProperty Name="MW_USER" Relationship="Model.FK_MW_REVIEW_MW_USER" FromRole="MW_REVIEW" ToRole="MW_USER" />
+        </EntityType>
+        <EntityType Name="MW_SEARCHABLE_ITEM">
+          <Key>
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="abstract_item_id" Type="Int32" Nullable="false" />
+          <Property Name="colour_id" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Single" Nullable="false" />
+          <Property Name="discount" Type="Single" />
+          <Property Name="from_url" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="searchable_item_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="source_id" Type="Int32" Nullable="false" />
+          <Property Name="default_pic" Type="Int32" />
+          <Property Name="product_code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_ABSTRACT_ITEM" Relationship="Model.FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_ABSTRACT_ITEM" />
+          <NavigationProperty Name="MW_APPAREL_SOURCE" Relationship="Model.FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_APPAREL_SOURCE" />
+          <NavigationProperty Name="MW_COLOUR" Relationship="Model.FK_MW_SEARCHABLE_ITEM_MW_COLOUR" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_COLOUR" />
+          <NavigationProperty Name="MW_ITEM_MATCHINGNESS" Relationship="Model.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_ITEM_MATCHINGNESS" />
+          <NavigationProperty Name="MW_ITEM_MATCHINGNESS1" Relationship="Model.FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_ITEM_MATCHINGNESS" />
+          <NavigationProperty Name="MW_ITEM_PICTURE" Relationship="Model.FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_ITEM_PICTURE" />
+          <NavigationProperty Name="MW_ITEM_SIMILARITY" Relationship="Model.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_ITEM_SIMILARITY" />
+          <NavigationProperty Name="MW_ITEM_SIMILARITY1" Relationship="Model.FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_ITEM_SIMILARITY" />
+          <NavigationProperty Name="MW_OUTFIT_ITEM" Relationship="Model.FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_OUTFIT_ITEM" />
+          <NavigationProperty Name="MW_PICTURE" Relationship="Model.FK_MW_ITEM_COLOUR_MW_COLOUR" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_PICTURE" />
+          <NavigationProperty Name="MW_REVIEW" Relationship="Model.FK_MW_REVIEW_MW_SEARCHABLE_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_REVIEW" />
+          <NavigationProperty Name="MW_UNIQ_ITEM" Relationship="Model.FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_UNIQ_ITEM" />
+          <NavigationProperty Name="MW_USER_TAG_ITEM" Relationship="Model.FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_USER_TAG_ITEM" />
+          <NavigationProperty Name="MW_TAG" Relationship="Model.MW_ITEM_TAG" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_TAG" />
+          <NavigationProperty Name="MW_USER" Relationship="Model.MW_USER_ITEM_FAV" FromRole="MW_SEARCHABLE_ITEM" ToRole="MW_USER" />
+        </EntityType>
+        <EntityType Name="MW_SIZE">
+          <Key>
+            <PropertyRef Name="size_id" />
+          </Key>
+          <Property Name="size_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="size_val" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="size_type" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_UNIQ_ITEM" Relationship="Model.FK_MW_UNIQ_ITEM_MW_SIZE" FromRole="MW_SIZE" ToRole="MW_UNIQ_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_TAG">
+          <Key>
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="tag_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="tag_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="tag_type" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="default_picture" Type="Int32" />
+          <NavigationProperty Name="MW_PICTURE" Relationship="Model.FK_MW_TAG_MW_Picture" FromRole="MW_TAG" ToRole="MW_PICTURE" />
+          <NavigationProperty Name="MW_TAG_REL" Relationship="Model.FK_MW_TAG_REL_MW_TAG" FromRole="MW_TAG" ToRole="MW_TAG_REL" />
+          <NavigationProperty Name="MW_TAG_REL1" Relationship="Model.FK_MW_TAG_REL_MW_TAG1" FromRole="MW_TAG" ToRole="MW_TAG_REL" />
+          <NavigationProperty Name="MW_USER_TAG" Relationship="Model.FK_MW_USER_TAG_MW_TAG" FromRole="MW_TAG" ToRole="MW_USER_TAG" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.MW_ITEM_TAG" FromRole="MW_TAG" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_TAG_REL">
+          <Key>
+            <PropertyRef Name="source_tag_id" />
+            <PropertyRef Name="target_tag_id" />
+          </Key>
+          <Property Name="source_tag_id" Type="Int32" Nullable="false" />
+          <Property Name="target_tag_id" Type="Int32" Nullable="false" />
+          <Property Name="probability" Type="Single" />
+          <NavigationProperty Name="MW_TAG" Relationship="Model.FK_MW_TAG_REL_MW_TAG" FromRole="MW_TAG_REL" ToRole="MW_TAG" />
+          <NavigationProperty Name="MW_TAG1" Relationship="Model.FK_MW_TAG_REL_MW_TAG1" FromRole="MW_TAG_REL" ToRole="MW_TAG" />
+        </EntityType>
+        <EntityType Name="MW_UNIQ_ITEM">
+          <Key>
+            <PropertyRef Name="uniq_item_id" />
+          </Key>
+          <Property Name="size_id" Type="Int32" Nullable="false" />
+          <Property Name="stock" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="searchable_item_id" Type="Int32" Nullable="false" />
+          <Property Name="uniq_item_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="last_checked" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM" FromRole="MW_UNIQ_ITEM" ToRole="MW_SEARCHABLE_ITEM" />
+          <NavigationProperty Name="MW_SIZE" Relationship="Model.FK_MW_UNIQ_ITEM_MW_SIZE" FromRole="MW_UNIQ_ITEM" ToRole="MW_SIZE" />
+        </EntityType>
+        <EntityType Name="MW_UPLOADED_ITEM">
+          <Key>
+            <PropertyRef Name="upload_item_id" />
+          </Key>
+          <Property Name="upload_item_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="colour_id" Type="Int32" Nullable="false" />
+          <Property Name="category_id" Type="Int32" Nullable="false" />
+          <Property Name="picture_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_CATEGORY" Relationship="Model.FK_MW_UPLOADED_ITEM_MW_CATEGORY" FromRole="MW_UPLOADED_ITEM" ToRole="MW_CATEGORY" />
+          <NavigationProperty Name="MW_COLOUR" Relationship="Model.FK_MW_UPLOADED_ITEM_MW_COLOUR" FromRole="MW_UPLOADED_ITEM" ToRole="MW_COLOUR" />
+          <NavigationProperty Name="MW_PICTURE" Relationship="Model.FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM" FromRole="MW_UPLOADED_ITEM" ToRole="MW_PICTURE" />
+          <NavigationProperty Name="MW_USER_TAG_UPLOADED" Relationship="Model.FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM" FromRole="MW_UPLOADED_ITEM" ToRole="MW_USER_TAG_UPLOADED" />
+        </EntityType>
+        <EntityType Name="MW_USER">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="enable_SSN_login" Type="Boolean" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="birthday" Type="DateTime" Precision="0" />
+          <Property Name="gender" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="name" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="credit" Type="Int32" />
+          <Property Name="experience" Type="Int32" />
+          <Property Name="occupation" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="nationality" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="location" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="profile_picture" Type="Int32" />
+          <NavigationProperty Name="MW_PICTURE" Relationship="Model.FK_MW_USER_MW_PICTURE" FromRole="MW_USER" ToRole="MW_PICTURE" />
+          <NavigationProperty Name="MW_REVIEW" Relationship="Model.FK_MW_REVIEW_MW_USER" FromRole="MW_USER" ToRole="MW_REVIEW" />
+          <NavigationProperty Name="MW_USER_RATE_OUTFIT" Relationship="Model.FK_MW_USER_RATE_OUTFIT_MW_USER" FromRole="MW_USER" ToRole="MW_USER_RATE_OUTFIT" />
+          <NavigationProperty Name="MW_USER_SSN" Relationship="Model.FK_MW_USER_SSN_MW_USER" FromRole="MW_USER" ToRole="MW_USER_SSN" />
+          <NavigationProperty Name="MW_USER_TAG" Relationship="Model.FK_MW_USER_TAG_MW_USER" FromRole="MW_USER" ToRole="MW_USER_TAG" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.MW_USER_ITEM_FAV" FromRole="MW_USER" ToRole="MW_SEARCHABLE_ITEM" />
+        </EntityType>
+        <EntityType Name="MW_USER_RATE_OUTFIT">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="outfit_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="outfit_id" Type="Int32" Nullable="false" />
+          <Property Name="value" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_OUTFIT" Relationship="Model.FK_MW_USER_RATE_OUTFIT_MW_OUTFIT" FromRole="MW_USER_RATE_OUTFIT" ToRole="MW_OUTFIT" />
+          <NavigationProperty Name="MW_USER" Relationship="Model.FK_MW_USER_RATE_OUTFIT_MW_USER" FromRole="MW_USER_RATE_OUTFIT" ToRole="MW_USER" />
+        </EntityType>
+        <EntityType Name="MW_USER_SSN">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="SSN_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SSN_id" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="token" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MW_USER" Relationship="Model.FK_MW_USER_SSN_MW_USER" FromRole="MW_USER_SSN" ToRole="MW_USER" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="tag_id" Type="Int32" Nullable="false" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="tag_picture" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MW_TAG" Relationship="Model.FK_MW_USER_TAG_MW_TAG" FromRole="MW_USER_TAG" ToRole="MW_TAG" />
+          <NavigationProperty Name="MW_USER" Relationship="Model.FK_MW_USER_TAG_MW_USER" FromRole="MW_USER_TAG" ToRole="MW_USER" />
+          <NavigationProperty Name="MW_USER_TAG_OUTFIT" Relationship="Model.FK_MW_USER_TAG_OUTFITS_MW_USER_TAG" FromRole="MW_USER_TAG" ToRole="MW_USER_TAG_OUTFIT" />
+          <NavigationProperty Name="MW_USER_TAG_ITEM" Relationship="Model.FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG" FromRole="MW_USER_TAG" ToRole="MW_USER_TAG_ITEM" />
+          <NavigationProperty Name="MW_USER_TAG_UPLOADED" Relationship="Model.FK_MW_USER_TAG_UPLOADED_MW_USER_TAG" FromRole="MW_USER_TAG" ToRole="MW_USER_TAG_UPLOADED" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG_ITEM">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+            <PropertyRef Name="searchable_item_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="tag_id" Type="Int32" Nullable="false" />
+          <Property Name="searchable_item_id" Type="Int32" Nullable="false" />
+          <Property Name="tag_time" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MW_SEARCHABLE_ITEM" Relationship="Model.FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM" FromRole="MW_USER_TAG_ITEM" ToRole="MW_SEARCHABLE_ITEM" />
+          <NavigationProperty Name="MW_USER_TAG" Relationship="Model.FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG" FromRole="MW_USER_TAG_ITEM" ToRole="MW_USER_TAG" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG_OUTFIT">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+            <PropertyRef Name="outfit_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="tag_id" Type="Int32" Nullable="false" />
+          <Property Name="outfit_id" Type="Int32" Nullable="false" />
+          <Property Name="tag_time" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MW_OUTFIT" Relationship="Model.FK_MW_USER_TAG_OUTFITS_MW_OUTFIT" FromRole="MW_USER_TAG_OUTFIT" ToRole="MW_OUTFIT" />
+          <NavigationProperty Name="MW_USER_TAG" Relationship="Model.FK_MW_USER_TAG_OUTFITS_MW_USER_TAG" FromRole="MW_USER_TAG_OUTFIT" ToRole="MW_USER_TAG" />
+        </EntityType>
+        <EntityType Name="MW_USER_TAG_UPLOADED">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="tag_id" />
+            <PropertyRef Name="upload_item_id" />
+          </Key>
+          <Property Name="user_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="tag_id" Type="Int32" Nullable="false" />
+          <Property Name="upload_item_id" Type="Int32" Nullable="false" />
+          <Property Name="tag_time" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MW_UPLOADED_ITEM" Relationship="Model.FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM" FromRole="MW_USER_TAG_UPLOADED" ToRole="MW_UPLOADED_ITEM" />
+          <NavigationProperty Name="MW_USER_TAG" Relationship="Model.FK_MW_USER_TAG_UPLOADED_MW_USER_TAG" FromRole="MW_USER_TAG_UPLOADED" ToRole="MW_USER_TAG" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_MW_ABSTRACT_ITEM_MW_BRAND">
+          <End Role="MW_CATEGORY" Type="Model.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_ABSTRACT_ITEM" Type="Model.MW_ABSTRACT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_ABSTRACT_ITEM">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ABSTRACT_ITEM_MW_BRAND1">
+          <End Role="MW_BRAND" Type="Model.MW_BRAND" Multiplicity="0..1" />
+          <End Role="MW_ABSTRACT_ITEM" Type="Model.MW_ABSTRACT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_BRAND">
+              <PropertyRef Name="brand_id" />
+            </Principal>
+            <Dependent Role="MW_ABSTRACT_ITEM">
+              <PropertyRef Name="brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_SEARCHABLE_ITEM_MW_ABSTRACT_ITEM">
+          <End Role="MW_ABSTRACT_ITEM" Type="Model.MW_ABSTRACT_ITEM" Multiplicity="1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_ABSTRACT_ITEM">
+              <PropertyRef Name="abstract_item_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="abstract_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_SOURCE_MW_ADDRESS">
+          <End Role="MW_ADDRESS" Type="Model.MW_ADDRESS" Multiplicity="0..1" />
+          <End Role="MW_APPAREL_SOURCE" Type="Model.MW_APPAREL_SOURCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_ADDRESS">
+              <PropertyRef Name="address_id" />
+            </Principal>
+            <Dependent Role="MW_APPAREL_SOURCE">
+              <PropertyRef Name="address_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_PICTURE_MW_APPAREL_SOURCE">
+          <End Role="MW_APPAREL_SOURCE" Type="Model.MW_APPAREL_SOURCE" Multiplicity="1" />
+          <End Role="MW_ITEM_PICTURE" Type="Model.MW_ITEM_PICTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_APPAREL_SOURCE">
+              <PropertyRef Name="source_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_PICTURE">
+              <PropertyRef Name="source_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_SEARCHABLE_ITEM_MW_ITEM_SOURCE">
+          <End Role="MW_APPAREL_SOURCE" Type="Model.MW_APPAREL_SOURCE" Multiplicity="1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_APPAREL_SOURCE">
+              <PropertyRef Name="source_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="source_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_BRAND_CN_MW_BRAND">
+          <End Role="MW_BRAND" Type="Model.MW_BRAND" Multiplicity="1" />
+          <End Role="MW_BRAND_CN" Type="Model.MW_BRAND_CN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MW_BRAND">
+              <PropertyRef Name="brand_id" />
+            </Principal>
+            <Dependent Role="MW_BRAND_CN">
+              <PropertyRef Name="brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_CATEGORY_CN_MW_CATEGORY">
+          <End Role="MW_CATEGORY" Type="Model.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_CATEGORY_CN" Type="Model.MW_CATEGORY_CN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_CATEGORY_CN">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY">
+          <End Role="MW_CATEGORY" Type="Model.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_CATEGORY_RELATIONSHIP" Type="Model.MW_CATEGORY_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_CATEGORY_RELATIONSHIP">
+              <PropertyRef Name="source_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_CATEGORY_RELATIONSHIP_MW_CATEGORY1">
+          <End Role="MW_CATEGORY" Type="Model.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_CATEGORY_RELATIONSHIP" Type="Model.MW_CATEGORY_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_CATEGORY_RELATIONSHIP">
+              <PropertyRef Name="target_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UPLOADED_ITEM_MW_CATEGORY">
+          <End Role="MW_CATEGORY" Type="Model.MW_CATEGORY" Multiplicity="1" />
+          <End Role="MW_UPLOADED_ITEM" Type="Model.MW_UPLOADED_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_CATEGORY">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_COLOUR_CN_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_COLOUR_CN" Type="Model.MW_COLOUR_CN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_COLOUR_CN">
+              <PropertyRef Name="colour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_COLOUR_RELATIONSHIP" Type="Model.MW_COLOUR_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_COLOUR_RELATIONSHIP">
+              <PropertyRef Name="source_colour" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_COLOUR_RELATIONSHIP_MW_COLOUR1">
+          <End Role="MW_COLOUR" Type="Model.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_COLOUR_RELATIONSHIP" Type="Model.MW_COLOUR_RELATIONSHIP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_COLOUR_RELATIONSHIP">
+              <PropertyRef Name="target_colour" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_SEARCHABLE_ITEM_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="colour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UPLOADED_ITEM_MW_COLOUR">
+          <End Role="MW_COLOUR" Type="Model.MW_COLOUR" Multiplicity="1" />
+          <End Role="MW_UPLOADED_ITEM" Type="Model.MW_UPLOADED_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_COLOUR">
+              <PropertyRef Name="colour_id" />
+            </Principal>
+            <Dependent Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="colour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_MATCHINGNESS" Type="Model.MW_ITEM_MATCHINGNESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_MATCHINGNESS">
+              <PropertyRef Name="source_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_MATCHINGNESS_MW_SEARCHABLE_ITEM1">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_MATCHINGNESS" Type="Model.MW_ITEM_MATCHINGNESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_MATCHINGNESS">
+              <PropertyRef Name="target_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_PICTURE_MW_Picture">
+          <End Role="MW_PICTURE" Type="Model.MW_PICTURE" Multiplicity="1" />
+          <End Role="MW_ITEM_PICTURE" Type="Model.MW_ITEM_PICTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_PICTURE_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_PICTURE" Type="Model.MW_ITEM_PICTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_PICTURE">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_SIMILARITY" Type="Model.MW_ITEM_SIMILARITY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_SIMILARITY">
+              <PropertyRef Name="source_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_SIMILARITY_MW_SEARCHABLE_ITEM1">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_ITEM_SIMILARITY" Type="Model.MW_ITEM_SIMILARITY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_ITEM_SIMILARITY">
+              <PropertyRef Name="target_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_OUTFIT_ITEM_MW_OUTFIT1">
+          <End Role="MW_OUTFIT" Type="Model.MW_OUTFIT" Multiplicity="1" />
+          <End Role="MW_OUTFIT_ITEM" Type="Model.MW_OUTFIT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Principal>
+            <Dependent Role="MW_OUTFIT_ITEM">
+              <PropertyRef Name="outfit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_RATE_OUTFIT_MW_OUTFIT">
+          <End Role="MW_OUTFIT" Type="Model.MW_OUTFIT" Multiplicity="1" />
+          <End Role="MW_USER_RATE_OUTFIT" Type="Model.MW_USER_RATE_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Principal>
+            <Dependent Role="MW_USER_RATE_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_OUTFITS_MW_OUTFIT">
+          <End Role="MW_OUTFIT" Type="Model.MW_OUTFIT" Multiplicity="1" />
+          <End Role="MW_USER_TAG_OUTFIT" Type="Model.MW_USER_TAG_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_OUTFIT">
+              <PropertyRef Name="outfit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_OUTFIT_ITEM_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_OUTFIT_ITEM" Type="Model.MW_OUTFIT_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_OUTFIT_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_ITEM_COLOUR_MW_COLOUR">
+          <End Role="MW_PICTURE" Type="Model.MW_PICTURE" Multiplicity="0..1" />
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="default_pic" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_TAG_MW_Picture">
+          <End Role="MW_PICTURE" Type="Model.MW_PICTURE" Multiplicity="0..1" />
+          <End Role="MW_TAG" Type="Model.MW_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_TAG">
+              <PropertyRef Name="default_picture" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UPLOADED_ITEM_MW_UPLOADED_ITEM">
+          <End Role="MW_PICTURE" Type="Model.MW_PICTURE" Multiplicity="1" />
+          <End Role="MW_UPLOADED_ITEM" Type="Model.MW_UPLOADED_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="picture_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_MW_PICTURE">
+          <End Role="MW_PICTURE" Type="Model.MW_PICTURE" Multiplicity="0..1" />
+          <End Role="MW_USER" Type="Model.MW_USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_PICTURE">
+              <PropertyRef Name="picture_id" />
+            </Principal>
+            <Dependent Role="MW_USER">
+              <PropertyRef Name="profile_picture" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_REVIEW_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_REVIEW" Type="Model.MW_REVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_REVIEW">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_REVIEW_MW_USER">
+          <End Role="MW_USER" Type="Model.MW_USER" Multiplicity="1" />
+          <End Role="MW_REVIEW" Type="Model.MW_REVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_REVIEW">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UNIQ_ITEM_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_UNIQ_ITEM" Type="Model.MW_UNIQ_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_UNIQ_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_SEARCHABLE_MW_SEARCHABLE_ITEM">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="1" />
+          <End Role="MW_USER_TAG_ITEM" Type="Model.MW_USER_TAG_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SEARCHABLE_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_ITEM">
+              <PropertyRef Name="searchable_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_UNIQ_ITEM_MW_SIZE">
+          <End Role="MW_SIZE" Type="Model.MW_SIZE" Multiplicity="1" />
+          <End Role="MW_UNIQ_ITEM" Type="Model.MW_UNIQ_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_SIZE">
+              <PropertyRef Name="size_id" />
+            </Principal>
+            <Dependent Role="MW_UNIQ_ITEM">
+              <PropertyRef Name="size_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_TAG_REL_MW_TAG">
+          <End Role="MW_TAG" Type="Model.MW_TAG" Multiplicity="1" />
+          <End Role="MW_TAG_REL" Type="Model.MW_TAG_REL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_TAG">
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_TAG_REL">
+              <PropertyRef Name="source_tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_TAG_REL_MW_TAG1">
+          <End Role="MW_TAG" Type="Model.MW_TAG" Multiplicity="1" />
+          <End Role="MW_TAG_REL" Type="Model.MW_TAG_REL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_TAG">
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_TAG_REL">
+              <PropertyRef Name="target_tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_MW_TAG">
+          <End Role="MW_TAG" Type="Model.MW_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG" Type="Model.MW_USER_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_TAG">
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG">
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_UPLOADED_MW_UPLOADED_ITEM">
+          <End Role="MW_UPLOADED_ITEM" Type="Model.MW_UPLOADED_ITEM" Multiplicity="1" />
+          <End Role="MW_USER_TAG_UPLOADED" Type="Model.MW_USER_TAG_UPLOADED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_UPLOADED_ITEM">
+              <PropertyRef Name="upload_item_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_UPLOADED">
+              <PropertyRef Name="upload_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_RATE_OUTFIT_MW_USER">
+          <End Role="MW_USER" Type="Model.MW_USER" Multiplicity="1" />
+          <End Role="MW_USER_RATE_OUTFIT" Type="Model.MW_USER_RATE_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_USER_RATE_OUTFIT">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_SSN_MW_USER">
+          <End Role="MW_USER" Type="Model.MW_USER" Multiplicity="1" />
+          <End Role="MW_USER_SSN" Type="Model.MW_USER_SSN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_USER_SSN">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_MW_USER">
+          <End Role="MW_USER" Type="Model.MW_USER" Multiplicity="1" />
+          <End Role="MW_USER_TAG" Type="Model.MW_USER_TAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_OUTFITS_MW_USER_TAG">
+          <End Role="MW_USER_TAG" Type="Model.MW_USER_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG_OUTFIT" Type="Model.MW_USER_TAG_OUTFIT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_OUTFIT">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_SEARCHABLE_MW_USER_TAG">
+          <End Role="MW_USER_TAG" Type="Model.MW_USER_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG_ITEM" Type="Model.MW_USER_TAG_ITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_ITEM">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MW_USER_TAG_UPLOADED_MW_USER_TAG">
+          <End Role="MW_USER_TAG" Type="Model.MW_USER_TAG" Multiplicity="1" />
+          <End Role="MW_USER_TAG_UPLOADED" Type="Model.MW_USER_TAG_UPLOADED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MW_USER_TAG">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Principal>
+            <Dependent Role="MW_USER_TAG_UPLOADED">
+              <PropertyRef Name="user_id" />
+              <PropertyRef Name="tag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MW_ITEM_TAG">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <End Role="MW_TAG" Type="Model.MW_TAG" Multiplicity="*" />
+        </Association>
+        <Association Name="MW_USER_ITEM_FAV">
+          <End Role="MW_SEARCHABLE_ITEM" Type="Model.MW_SEARCHABLE_ITEM" Multiplicity="*" />
+          <End Role="MW_USER" Type="Model.MW_USER" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="MWDBEntities">
+          <EntitySetMapping Name="MW_ABSTRACT_ITEM">
+            <EntityTypeMapping TypeName="Model.MW_ABSTRACT_ITEM">
+              <MappingFragment StoreEntitySet="MW_ABSTRACT_ITEM">
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="abstract_item_id" ColumnName="abstract_item_id" />
+                <ScalarProperty Name="material" ColumnName="material" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+                <ScalarProperty Name="upper_price" ColumnName="upper_price" />
+                <ScalarProperty Name="lower_price" ColumnName="lower_price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_ADDRESS">
+            <EntityTypeMapping TypeName="Model.MW_ADDRESS">
+              <MappingFragment StoreEntitySet="MW_ADDRESS">
+                <ScalarProperty Name="address_id" ColumnName="address_id" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="street_address" ColumnName="street_address" />
+                <ScalarProperty Name="unit" ColumnName="unit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_APPAREL_SOURCE">
+            <EntityTypeMapping TypeName="Model.MW_APPAREL_SOURCE">
+              <MappingFragment StoreEntitySet="MW_APPAREL_SOURCE">
+                <ScalarProperty Name="source_id" ColumnName="source_id" />
+                <ScalarProperty Name="source_name" ColumnName="source_name" />
+                <ScalarProperty Name="source_url" ColumnName="source_url" />
+                <ScalarProperty Name="address_id" ColumnName="address_id" />
+                <ScalarProperty Name="last_checked" ColumnName="last_checked" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_BRAND">
+            <EntityTypeMapping TypeName="Model.MW_BRAND">
+              <MappingFragment StoreEntitySet="MW_BRAND">
+                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+                <ScalarProperty Name="brand_name" ColumnName="brand_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_BRAND_CN">
+            <EntityTypeMapping TypeName="Model.MW_BRAND_CN">
+              <MappingFragment StoreEntitySet="MW_BRAND_CN">
+                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+                <ScalarProperty Name="brand_name" ColumnName="brand_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_CATEGORY">
+            <EntityTypeMapping TypeName="Model.MW_CATEGORY">
+              <MappingFragment StoreEntitySet="MW_CATEGORY">
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="category_name" ColumnName="category_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_CATEGORY_CN">
+            <EntityTypeMapping TypeName="Model.MW_CATEGORY_CN">
+              <MappingFragment StoreEntitySet="MW_CATEGORY_CN">
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="category_name" ColumnName="category_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_CATEGORY_RELATIONSHIP">
+            <EntityTypeMapping TypeName="Model.MW_CATEGORY_RELATIONSHIP">
+              <MappingFragment StoreEntitySet="MW_CATEGORY_RELATIONSHIP">
+                <ScalarProperty Name="source_category" ColumnName="source_category" />
+                <ScalarProperty Name="target_category" ColumnName="target_category" />
+                <ScalarProperty Name="relationship" ColumnName="relationship" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_COLOUR">
+            <EntityTypeMapping TypeName="Model.MW_COLOUR">
+              <MappingFragment StoreEntitySet="MW_COLOUR">
+                <ScalarProperty Name="colour_id" ColumnName="colour_id" />
+                <ScalarProperty Name="colour_name" ColumnName="colour_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_COLOUR_CN">
+            <EntityTypeMapping TypeName="Model.MW_COLOUR_CN">
+              <MappingFragment StoreEntitySet="MW_COLOUR_CN">
+                <ScalarProperty Name="colour_id" ColumnName="colour_id" />
+                <ScalarProperty Name="colour_name" ColumnName="colour_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_COLOUR_RELATIONSHIP">
+            <EntityTypeMapping TypeName="Model.MW_COLOUR_RELATIONSHIP">
+              <MappingFragment StoreEntitySet="MW_COLOUR_RELATIONSHIP">
+                <ScalarProperty Name="source_colour" ColumnName="source_colour" />
+                <ScalarProperty Name="target_colour" ColumnName="target_colour" />
+                <ScalarProperty Name="relationship" ColumnName="relationship" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_ITEM_MATCHINGNESS">
+            <EntityTypeMapping TypeName="Model.MW_ITEM_MATCHINGNESS">
+              <MappingFragment StoreEntitySet="MW_ITEM_MATCHINGNESS">
+                <ScalarProperty Name="source_item_id" ColumnName="source_item_id" />
+                <ScalarProperty Name="target_item_id" ColumnName="target_item_id" />
+                <ScalarProperty Name="matchingness" ColumnName="matchingness" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_ITEM_PICTURE">
+            <EntityTypeMapping TypeName="Model.MW_ITEM_PICTURE">
+              <MappingFragment StoreEntitySet="MW_ITEM_PICTURE">
+                <ScalarProperty Name="picture_id" ColumnName="picture_id" />
+                <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+                <ScalarProperty Name="source_id" ColumnName="source_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_ITEM_SIMILARITY">
+            <EntityTypeMapping TypeName="Model.MW_ITEM_SIMILARITY">
+              <MappingFragment StoreEntitySet="MW_ITEM_SIMILARITY">
+                <ScalarProperty Name="source_item_id" ColumnName="source_item_id" />
+                <ScalarProperty Name="target_item_id" ColumnName="target_item_id" />
+                <ScalarProperty Name="similarity" ColumnName="similarity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_OUTFIT">
+            <EntityTypeMapping TypeName="Model.MW_OUTFIT">
+              <MappingFragment StoreEntitySet="MW_OUTFIT">
+                <ScalarProperty Name="outfit_id" ColumnName="outfit_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="picture_id" ColumnName="picture_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_OUTFIT_ITEM">
+            <EntityTypeMapping TypeName="Model.MW_OUTFIT_ITEM">
+              <MappingFragment StoreEntitySet="MW_OUTFIT_ITEM">
+                <ScalarProperty Name="outfit_id" ColumnName="outfit_id" />
+                <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+                <ScalarProperty Name="pic_x" ColumnName="pic_x" />
+                <ScalarProperty Name="pic_y" ColumnName="pic_y" />
+                <ScalarProperty Name="angle" ColumnName="angle" />
+                <ScalarProperty Name="crop_x" ColumnName="crop_x" />
+                <ScalarProperty Name="crop_y" ColumnName="crop_y" />
+                <ScalarProperty Name="crop_width" ColumnName="crop_width" />
+                <ScalarProperty Name="crop_height" ColumnName="crop_height" />
+                <ScalarProperty Name="sizing_factor" ColumnName="sizing_factor" />
+                <ScalarProperty Name="z_index" ColumnName="z_index" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_PICTURE">
+            <EntityTypeMapping TypeName="Model.MW_PICTURE">
+              <MappingFragment StoreEntitySet="MW_PICTURE">
+                <ScalarProperty Name="picture_id" ColumnName="picture_id" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="height" ColumnName="height" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_REVIEW">
+            <EntityTypeMapping TypeName="Model.MW_REVIEW">
+              <MappingFragment StoreEntitySet="MW_REVIEW">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="review" ColumnName="review" />
+                <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_SEARCHABLE_ITEM">
+            <EntityTypeMapping TypeName="Model.MW_SEARCHABLE_ITEM">
+              <MappingFragment StoreEntitySet="MW_SEARCHABLE_ITEM">
+                <ScalarProperty Name="abstract_item_id" ColumnName="abstract_item_id" />
+                <ScalarProperty Name="colour_id" ColumnName="colour_id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="from_url" ColumnName="from_url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+                <ScalarProperty Name="source_id" ColumnName="source_id" />
+                <ScalarProperty Name="default_pic" ColumnName="default_pic" />
+                <ScalarProperty Name="product_code" ColumnName="product_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_SIZE">
+            <EntityTypeMapping TypeName="Model.MW_SIZE">
+              <MappingFragment StoreEntitySet="MW_SIZE">
+                <ScalarProperty Name="size_id" ColumnName="size_id" />
+                <ScalarProperty Name="size_val" ColumnName="size_val" />
+                <ScalarProperty Name="size_type" ColumnName="size_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_TAG">
+            <EntityTypeMapping TypeName="Model.MW_TAG">
+              <MappingFragment StoreEntitySet="MW_TAG">
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+                <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+                <ScalarProperty Name="tag_type" ColumnName="tag_type" />
+                <ScalarProperty Name="default_picture" ColumnName="default_picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_TAG_REL">
+            <EntityTypeMapping TypeName="Model.MW_TAG_REL">
+              <MappingFragment StoreEntitySet="MW_TAG_REL">
+                <ScalarProperty Name="source_tag_id" ColumnName="source_tag_id" />
+                <ScalarProperty Name="target_tag_id" ColumnName="target_tag_id" />
+                <ScalarProperty Name="probability" ColumnName="probability" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_UNIQ_ITEM">
+            <EntityTypeMapping TypeName="Model.MW_UNIQ_ITEM">
+              <MappingFragment StoreEntitySet="MW_UNIQ_ITEM">
+                <ScalarProperty Name="size_id" ColumnName="size_id" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+                <ScalarProperty Name="uniq_item_id" ColumnName="uniq_item_id" />
+                <ScalarProperty Name="last_checked" ColumnName="last_checked" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_UPLOADED_ITEM">
+            <EntityTypeMapping TypeName="Model.MW_UPLOADED_ITEM">
+              <MappingFragment StoreEntitySet="MW_UPLOADED_ITEM">
+                <ScalarProperty Name="upload_item_id" ColumnName="upload_item_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="colour_id" ColumnName="colour_id" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="picture_id" ColumnName="picture_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_USER">
+            <EntityTypeMapping TypeName="Model.MW_USER">
+              <MappingFragment StoreEntitySet="MW_USER">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="enable_SSN_login" ColumnName="enable_SSN_login" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="credit" ColumnName="credit" />
+                <ScalarProperty Name="experience" ColumnName="experience" />
+                <ScalarProperty Name="occupation" ColumnName="occupation" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="profile_picture" ColumnName="profile_picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_USER_RATE_OUTFIT">
+            <EntityTypeMapping TypeName="Model.MW_USER_RATE_OUTFIT">
+              <MappingFragment StoreEntitySet="MW_USER_RATE_OUTFIT">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="outfit_id" ColumnName="outfit_id" />
+                <ScalarProperty Name="value" ColumnName="value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_USER_SSN">
+            <EntityTypeMapping TypeName="Model.MW_USER_SSN">
+              <MappingFragment StoreEntitySet="MW_USER_SSN">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="SSN_id" ColumnName="SSN_id" />
+                <ScalarProperty Name="token" ColumnName="token" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_USER_TAG">
+            <EntityTypeMapping TypeName="Model.MW_USER_TAG">
+              <MappingFragment StoreEntitySet="MW_USER_TAG">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="tag_picture" ColumnName="tag_picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_USER_TAG_ITEM">
+            <EntityTypeMapping TypeName="Model.MW_USER_TAG_ITEM">
+              <MappingFragment StoreEntitySet="MW_USER_TAG_ITEM">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+                <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+                <ScalarProperty Name="tag_time" ColumnName="tag_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_USER_TAG_OUTFIT">
+            <EntityTypeMapping TypeName="Model.MW_USER_TAG_OUTFIT">
+              <MappingFragment StoreEntitySet="MW_USER_TAG_OUTFIT">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+                <ScalarProperty Name="outfit_id" ColumnName="outfit_id" />
+                <ScalarProperty Name="tag_time" ColumnName="tag_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MW_USER_TAG_UPLOADED">
+            <EntityTypeMapping TypeName="Model.MW_USER_TAG_UPLOADED">
+              <MappingFragment StoreEntitySet="MW_USER_TAG_UPLOADED">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+                <ScalarProperty Name="upload_item_id" ColumnName="upload_item_id" />
+                <ScalarProperty Name="tag_time" ColumnName="tag_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MW_ITEM_TAG" TypeName="Model.MW_ITEM_TAG" StoreEntitySet="MW_ITEM_TAG">
+            <EndProperty Name="MW_SEARCHABLE_ITEM">
+              <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+            </EndProperty>
+            <EndProperty Name="MW_TAG">
+              <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MW_USER_ITEM_FAV" TypeName="Model.MW_USER_ITEM_FAV" StoreEntitySet="MW_USER_ITEM_FAV">
+            <EndProperty Name="MW_SEARCHABLE_ITEM">
+              <ScalarProperty Name="searchable_item_id" ColumnName="searchable_item_id" />
+            </EndProperty>
+            <EndProperty Name="MW_USER">
+              <ScalarProperty Name="user_id" ColumnName="user_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

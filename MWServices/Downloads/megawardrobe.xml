@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AVAudioSearchDemo>
+	<endpoint url="http://localhost:28433/Service.svc/AVAudioSearch">
+		<arg name="input" />
+		<result format="xml" />
+	</endpoint>
+</AVAudioSearchDemo>
